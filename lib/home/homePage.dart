@@ -8,15 +8,15 @@ class HomePageScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final _data = ref.watch(userDataProvider);
+    final data = ref.watch(userDataProvider);
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
           title: const Text("App title"),
         ),
-        body: _data.when(
-          data: (_data) {
-            List<UserModel> users = _data.map((e) => e).toList();
+        body: data.when(
+          data: (data) {
+            List<UserModel> users = data.map((e) => e).toList();
             return Padding(
               padding: const EdgeInsets.fromLTRB(50.0, 20.0, 50.0, 0),
               child: Center(
@@ -36,9 +36,6 @@ class HomePageScreen extends ConsumerWidget {
                               Row(
                                 children: [
                                   Text(user.email),
-                                  Image(
-                                    image: NetworkImage(user.avatar),
-                                  )
                                 ],
                               ),
                             ],
