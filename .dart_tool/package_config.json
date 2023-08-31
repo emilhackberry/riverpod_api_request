@@ -116,6 +116,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "shimmer",
+      "rootUri": "file:///Users/emil/.pub-cache/hosted/pub.dev/shimmer-3.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///Users/emil/documents/Flutter/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -188,7 +194,7 @@
       "languageVersion": "3.1"
     }
   ],
-  "generated": "2023-08-28T07:13:51.603802Z",
+  "generated": "2023-08-28T07:25:14.313302Z",
   "generator": "pub",
   "generatorVersion": "3.1.0"
 }

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_http_request/dataProvider/dataProvider.dart';
 import 'package:riverpod_http_request/models/user.dart';
+import 'package:riverpod_http_request/services/services.dart';
+import 'package:riverpod_http_request/widgets/loadingScreen.dart';
 
 class HomePageScreen extends ConsumerWidget {
   const HomePageScreen({super.key});
@@ -12,19 +13,18 @@ class HomePageScreen extends ConsumerWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("App title"),
+          title: const Text("Users"),
         ),
         body: data.when(
           data: (data) {
             List<UserModel> users = data.map((e) => e).toList();
             return Padding(
-              padding: const EdgeInsets.fromLTRB(50.0, 20.0, 50.0, 0),
+              padding: const EdgeInsets.fromLTRB(40.0, 20.0, 40.0, 0),
               child: Center(
                 child: Column(
                   children: [
                     for (var user in users)
                       Card(
-                        surfaceTintColor: Colors.amberAccent,
                         child: Padding(
                           padding: const EdgeInsets.all(25.0),
                           child: Column(
@@ -33,10 +33,17 @@ class HomePageScreen extends ConsumerWidget {
                                 children: [Text(user.firstName), const SizedBox(width: 3.0), Text(user.lastName)],
                               ),
                               const SizedBox(height: 10.0),
-                              Row(
-                                children: [
-                                  Text(user.email),
-                                ],
+                              SizedBox(
+                                height: 30.0,
+                                child: Row(
+                                  children: [
+                                    Text(user.email),
+                                    const Spacer(),
+                                    Image(
+                                      image: NetworkImage(user.avatar),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ],
                           ),
@@ -49,7 +56,7 @@ class HomePageScreen extends ConsumerWidget {
           },
           error: (err, s) => Text(err.toString()),
           loading: () => const Center(
-            child: CircularProgressIndicator(),
+            child: LoadingScreen(),
           ),
         ),
       ),
