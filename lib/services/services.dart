@@ -1,10 +1,16 @@
 import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+
 import 'package:riverpod_http_request/models/user.dart';
 
-class ApiServices extends AsyncNotifier<void> {
+part 'services.g.dart';
+
+@riverpod
+class ApiServices extends _$ApiServices {
   String endpoint = 'https://api.jsonbin.io/v3/b/64f047108d92e126ae652c1b';
 
   @override
@@ -31,8 +37,8 @@ class ApiServices extends AsyncNotifier<void> {
   // }
 }
 
-final userProvider = Provider<ApiServices>((ref) => ApiServices());
+// final userProvider = Provider<ApiServices>((ref) => ApiServices());
 
-final userDataProvider = FutureProvider<List<UserModel>>((ref) async {
-  return ref.watch(userProvider).build();
-});
+// final userDataProvider = FutureProvider<List<UserModel>>((ref) async {
+//   return ref.watch(userProvider).build();
+// });

@@ -9,7 +9,7 @@ class HomePageScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final data = ref.watch(userDataProvider);
+    final data = ref.watch(apiServicesProvider);
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
