@@ -1,8 +1,0 @@
-version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
-options: "144dc223b78bcc985b78818da041255aa930e3bc9d7d9d8685544c83153b3fc5"
-build_start_time: [1693487326, 956632000]
-build_end_time: [1693487327, 3617000]
-inputs:
-  "/Users/emil/Documents/Flutter/riverpod_http_request/macos/Flutter/GeneratedPluginRegistrant.swift": !private [1693164607, 981018682]
-  "/Users/emil/Documents/Flutter/riverpod_http_request/macos/Runner/AppDelegate.swift": !private [1686177052, 0]
-  "/Users/emil/Documents/Flutter/riverpod_http_request/macos/Runner/MainFlutterWindow.swift": !private [1686177052, 0]

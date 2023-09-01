@@ -1,4 +1,4 @@
-import 'package:riverpod_http_request/services/services.dart';
+import 'package:riverpod_http_request/services/api_controller.dart';
 
 class UserModel {
   final int id;

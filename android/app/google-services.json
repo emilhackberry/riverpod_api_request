@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "379702735793",
+    "project_id": "flutter1-a79c2",
+    "storage_bucket": "flutter1-a79c2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379702735793:android:4cebe33539a2ab187a8390",
+        "android_client_info": {
+          "package_name": "com.example.riverpod_http_request"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "379702735793-r4vk533ikjvhd289ueiuq8hhi4g2bvqn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3AY4bPo3kkrbxKVZgEG71dsywTaVXaqU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "379702735793-r4vk533ikjvhd289ueiuq8hhi4g2bvqn.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "379702735793-2kspnsu2e4ejfa4urdgm47tkere65l20.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.riverpodHttpRequest.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

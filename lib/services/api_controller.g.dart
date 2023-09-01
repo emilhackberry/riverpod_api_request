@@ -1,0 +1,174 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'api_controller.dart';
+
+// **************************************************************************
+// RiverpodGenerator
+// **************************************************************************
+
+String _$apiControllerHash() => r'079cbf8d5681c85d80d114d6724f04a26fc57573';
+
+/// Copied from Dart SDK
+class _SystemHash {
+  _SystemHash._();
+
+  static int combine(int hash, int value) {
+    // ignore: parameter_assignments
+    hash = 0x1fffffff & (hash + value);
+    // ignore: parameter_assignments
+    hash = 0x1fffffff & (hash + ((0x0007ffff & hash) << 10));
+    return hash ^ (hash >> 6);
+  }
+
+  static int finish(int hash) {
+    // ignore: parameter_assignments
+    hash = 0x1fffffff & (hash + ((0x03ffffff & hash) << 3));
+    // ignore: parameter_assignments
+    hash = hash ^ (hash >> 11);
+    return 0x1fffffff & (hash + ((0x00003fff & hash) << 15));
+  }
+}
+
+abstract class _$ApiController
+    extends BuildlessAutoDisposeAsyncNotifier<List<UserModel>> {
+  late final AuthService authService;
+
+  Future<List<UserModel>> build({
+    required AuthService authService,
+  });
+}
+
+/// See also [ApiController].
+@ProviderFor(ApiController)
+const apiControllerProvider = ApiControllerFamily();
+
+/// See also [ApiController].
+class ApiControllerFamily extends Family<AsyncValue<List<UserModel>>> {
+  /// See also [ApiController].
+  const ApiControllerFamily();
+
+  /// See also [ApiController].
+  ApiControllerProvider call({
+    required AuthService authService,
+  }) {
+    return ApiControllerProvider(
+      authService: authService,
+    );
+  }
+
+  @override
+  ApiControllerProvider getProviderOverride(
+    covariant ApiControllerProvider provider,
+  ) {
+    return call(
+      authService: provider.authService,
+    );
+  }
+
+  static const Iterable<ProviderOrFamily>? _dependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
+
+  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
+      _allTransitiveDependencies;
+
+  @override
+  String? get name => r'apiControllerProvider';
+}
+
+/// See also [ApiController].
+class ApiControllerProvider extends AutoDisposeAsyncNotifierProviderImpl<
+    ApiController, List<UserModel>> {
+  /// See also [ApiController].
+  ApiControllerProvider({
+    required AuthService authService,
+  }) : this._internal(
+          () => ApiController()..authService = authService,
+          from: apiControllerProvider,
+          name: r'apiControllerProvider',
+          debugGetCreateSourceHash:
+              const bool.fromEnvironment('dart.vm.product')
+                  ? null
+                  : _$apiControllerHash,
+          dependencies: ApiControllerFamily._dependencies,
+          allTransitiveDependencies:
+              ApiControllerFamily._allTransitiveDependencies,
+          authService: authService,
+        );
+
+  ApiControllerProvider._internal(
+    super._createNotifier, {
+    required super.name,
+    required super.dependencies,
+    required super.allTransitiveDependencies,
+    required super.debugGetCreateSourceHash,
+    required super.from,
+    required this.authService,
+  }) : super.internal();
+
+  final AuthService authService;
+
+  @override
+  Future<List<UserModel>> runNotifierBuild(
+    covariant ApiController notifier,
+  ) {
+    return notifier.build(
+      authService: authService,
+    );
+  }
+
+  @override
+  Override overrideWith(ApiController Function() create) {
+    return ProviderOverride(
+      origin: this,
+      override: ApiControllerProvider._internal(
+        () => create()..authService = authService,
+        from: from,
+        name: null,
+        dependencies: null,
+        allTransitiveDependencies: null,
+        debugGetCreateSourceHash: null,
+        authService: authService,
+      ),
+    );
+  }
+
+  @override
+  AutoDisposeAsyncNotifierProviderElement<ApiController, List<UserModel>>
+      createElement() {
+    return _ApiControllerProviderElement(this);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is ApiControllerProvider && other.authService == authService;
+  }
+
+  @override
+  int get hashCode {
+    var hash = _SystemHash.combine(0, runtimeType.hashCode);
+    hash = _SystemHash.combine(hash, authService.hashCode);
+
+    return _SystemHash.finish(hash);
+  }
+}
+
+mixin ApiControllerRef on AutoDisposeAsyncNotifierProviderRef<List<UserModel>> {
+  /// The parameter `authService` of this provider.
+  AuthService get authService;
+}
+
+class _ApiControllerProviderElement
+    extends AutoDisposeAsyncNotifierProviderElement<ApiController,
+        List<UserModel>> with ApiControllerRef {
+  _ApiControllerProviderElement(super.provider);
+
+  @override
+  AuthService get authService => (origin as ApiControllerProvider).authService;
+}
+// ignore_for_file: type=lint
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member
